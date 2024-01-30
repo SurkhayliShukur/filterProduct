@@ -1,8 +1,10 @@
+import Layout from "../Layout"
+
 function Home (){
    return(
-    <div>
-        Home
-    </div>
+    <Layout>
+        <div>App</div>
+    </Layout>
    )
 }
 export default Home
