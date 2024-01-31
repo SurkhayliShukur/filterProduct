@@ -1,10 +1,13 @@
 import Layout from "../Layout"
+import {useGetProductsQuery} from "../../redux/api/product-api"
 
-function Home (){
-   return(
-    <Layout>
-        <div>App</div>
-    </Layout>
-   )
+function Home() {
+    const {data,isLoading,isError} = useGetProductsQuery()
+
+    return (
+        <Layout>
+            <div>App</div>
+        </Layout>
+    )
 }
 export default Home

@@ -1,6 +1,7 @@
+import React from "react"
+import { NavLink } from "react-router-dom"
 
-
-const Navbar = () => {
+const Navbar:React.FC = () => {
     return (
         <>
             <div className="shadow-lg">
@@ -10,9 +11,12 @@ const Navbar = () => {
                     </div>
                     <div className="flex-none">
                         <ul className="menu menu-horizontal px-1">
-                            <li><a>Link</a></li>
-                            <li><a>Link</a></li>
-
+                            <li>
+                                <NavLink to="/">Home</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/product">Product</NavLink>
+                            </li>
                         </ul>
                     </div>
                 </div>
