@@ -9,6 +9,7 @@ const initialState :productTypes = {
             price: "",
             description: "",
             category: "",
+            image:"",
             rating: {
                 rate: 0,
                 count: 0
