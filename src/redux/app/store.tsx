@@ -10,7 +10,8 @@ export const store = configureStore({
         
     },
     middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(productApi.middleware)
+    getDefaultMiddleware()
+    .concat(productApi.middleware)
 })
 
 export type RootState = ReturnType<typeof store.getState>
