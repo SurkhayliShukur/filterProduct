@@ -13,7 +13,7 @@ export const SelectFilter = () => {
     else{
         content = 
         <select className="select select-ghost w-full max-w-xs">
-        <option  selected>Pick the best JS framework</option>
+        <option disabled>Pick the best JS framework</option>
         {
             data.map((item:string,key:number)=> (
                 <option key={key} value={item} >{item}</option>

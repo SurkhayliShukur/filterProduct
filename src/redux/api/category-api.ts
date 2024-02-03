@@ -10,10 +10,13 @@ export const categoryApi = createApi({
     endpoints: (build) => ({
         GetCategory: build.query({
             query: () => '/products/categories'
+        }),
+        GetCategoryName: build.query({
+            query: (categoryName) => '/products/category'+ categoryName
         })
     })
 })
 
-export const {useGetCategoryQuery} = categoryApi
+export const {useGetCategoryQuery,useGetCategoryNameQuery} = categoryApi
 
 
