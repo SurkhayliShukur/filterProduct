@@ -7,43 +7,43 @@ import { singleProductsType } from "../../interface/data"
 import Skeleton from "../../components/Skeleton";
 
 const Product: React.FC = () => {
-  const {data,isLoading,isError} = useGetCategoryNameQuery('')
+  const { data, isLoading, isError } = useGetCategoryNameQuery('electronics')
   const fakeArray = Array.from({ length: 10 }, (_, index) => index)
 
   let content
-  if(isLoading){
-    content = 
-            <div className="flex flex-wrap justify-between ">
-                {
-                    fakeArray.map((_, index) => {
-                        return (
-                            <Skeleton key={index} />
-                        )
-                    }
+  if (isLoading) {
+    content =
+      <div className="flex flex-wrap justify-between ">
+        {
+          fakeArray.map((_, index) => {
+            return (
+              <Skeleton key={index} />
+            )
+          }
 
-                    )
-                }
-            </div>
+          )
+        }
+      </div>
   }
-  else if(isError){
+  else if (isError) {
     content = "isError"
   }
-  else{
-    content = 
-    <div className="flex flex-wrap justify-between">
-    {
-        data.map((item: singleProductsType) => (
+  else {
+    content =
+      <div className="flex flex-wrap justify-between">
+        {
+          data.map((item: singleProductsType) => (
             <Cards key={item.id} items={item} />
-        ))
-    }
-</div>
+          ))
+        }
+      </div>
   }
   return (
     <>
       <Layout>
         <div>Product Page</div>
         <div className='flex justify-end items-center gap-x-2 '>
-          
+
           <SelectFilter />
         </div>
         {content}
