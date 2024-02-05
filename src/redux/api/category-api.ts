@@ -12,7 +12,7 @@ export const categoryApi = createApi({
             query: () => '/products/categories'
         }),
         GetCategoryName: build.query({
-            query: (categoryName) => '/products/category'+ categoryName
+            query: (categoryName) => '/products/category/'+ categoryName
         })
     })
 })
