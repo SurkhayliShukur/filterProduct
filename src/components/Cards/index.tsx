@@ -1,14 +1,15 @@
-
 import { singleProductsType } from "../../interface/data"
+import { useNavigate } from "react-router-dom"
 
 
 
 const Cards = ({ items }: { items: singleProductsType }) => {
+    const navigate = useNavigate()
     return (
         <>
             <div className="card w-96 bg-base-100 shadow-xl w-[350px] m-5">
                 <figure>
-                    <img src={items.image} alt={items.title} className="w-[350px] h-[250px]" />
+                    <img src={items.image} alt={items.title} className="w-[350px] h-[250px]  object-contain" />
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
@@ -19,7 +20,10 @@ const Cards = ({ items }: { items: singleProductsType }) => {
                         <p>{items.category}</p>
                     </div>
                     <div className="flex justify-end items-end">
-                        <button className="btn btn-primary">Detail Page</button>
+                        <button 
+                        onClick={() => navigate(`${"/detail"}/${items.id}`)}
+                        className="btn btn-primary"
+                        >Detail Page</button>
                     </div>
 
                 </div>

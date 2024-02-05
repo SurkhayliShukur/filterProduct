@@ -5,8 +5,6 @@ import React from "react"
 export const SelectFilter:React.FC<selectNameProps> = ({selectName}) => {
     const { data, isLoading, isError } = useGetCategoryQuery('')
 
-   
-
     let content
 
     if (isLoading) {

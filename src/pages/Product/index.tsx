@@ -8,13 +8,13 @@ import Skeleton from "../../components/Skeleton";
 
 
 const Product: React.FC = () => {
-  const [categoryName,setCategoryName] = useState('electronics')
+  const [categoryName, setCategoryName] = useState('electronics')
   const { data, isLoading, isError } = useGetCategoryNameQuery(categoryName)
   const fakeArray = Array.from({ length: 10 }, (_, index) => index)
 
-  const selectName = (categoryName:string) => {
+  const selectName = (categoryName: string) => {
     setCategoryName(categoryName)
-}
+  }
 
   let content
   if (isLoading) {
@@ -50,7 +50,7 @@ const Product: React.FC = () => {
         <h1 className='text-center text-3xl py-3'>Product</h1>
         <div className='flex justify-end items-center gap-x-2 '>
 
-          <SelectFilter selectName = {selectName} />
+          <SelectFilter selectName={selectName} />
         </div>
         {content}
       </Layout>
