@@ -25,4 +25,4 @@ export const productApi = createApi({
 
 })
 
-export const { useGetProductsQuery,useGetProductIdQuery } = productApi
+export const { useGetProductsQuery, useGetProductIdQuery } = productApi

@@ -14,6 +14,9 @@ export type singleProductsType={
 export interface productTypes {
     products: singleProductsType[]
 }
+export interface basketType {
+    
+}
 export interface selectNameProps{
     selectName: (value:string) => void
 }

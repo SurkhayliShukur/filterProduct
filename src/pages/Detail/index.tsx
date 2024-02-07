@@ -31,7 +31,6 @@ const Detail: React.FC = () => {
                     <p className='text-xl text-zinc-700 m-2'
                         style={{ width: "480px" }} >Description: {data.description}...</p>
                     <p className='text-2xl text-zinc-700 m-2'>Price: {data.price}</p>
-
                 </div>
             </div>
     }
