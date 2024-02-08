@@ -17,3 +17,5 @@ const basketSlice = createSlice({
 
     }
 })
+
+export default basketSlice.reducer

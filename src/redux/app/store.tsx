@@ -1,5 +1,5 @@
 import {configureStore} from "@reduxjs/toolkit"
-import productSlice from "../slices/product-slice"
+import rootReducer from "./rootReducer"
 import {persistStore,persistReducer} from "redux-persist"
 import storage from "redux-persist/lib/storage"
 import {productApi} from "../api/product-api"
@@ -11,7 +11,7 @@ const persistConfig = {
     storage
 }
 
-const persistedReducer = persistReducer(persistConfig,productSlice)
+const persistedReducer = persistReducer(persistConfig,rootReducer)
 
 
 export const store = configureStore({
