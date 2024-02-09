@@ -2,8 +2,14 @@ import { singleProductsType } from "../../interface/data"
 import { useNavigate } from "react-router-dom"
 
 
+type buttons = "detail" | "product"
 
-const Cards = ({ items }: { items: singleProductsType }) => {
+export interface cardProps {
+    items: singleProductsType,
+    buttonType: buttons
+}
+
+const Cards = ({ items, buttonType }: cardProps) => {
     const navigate = useNavigate()
     return (
         <>
@@ -13,17 +19,22 @@ const Cards = ({ items }: { items: singleProductsType }) => {
                 </figure>
                 <div className="card-body">
                     <h2 className="card-title">
-                        {items.title.slice(0,15)}...
+                        {items.title.slice(0, 15)}...
                         <div className="badge badge-secondary">NEW</div>
                     </h2>
                     <div>
                         <p>{items.category}</p>
                     </div>
                     <div className="flex justify-end items-end">
-                        <button 
-                        onClick={() => navigate(`${"/detail"}/${items.id}`)}
-                        className="btn btn-primary"
-                        >Detail Page</button>
+                        {
+                            buttonType === "detail" && <button
+                                onClick={() => navigate(`${"/detail"}/${items.id}`)}
+                                className="btn btn-primary"
+                            >Detail Page
+                            </button>
+                        }
+                       {/* add basket button */}
+
                     </div>
 
                 </div>

@@ -1,5 +1,6 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
+import vite from "../../../public/vite.svg"
 
 const Navbar:React.FC = () => {
     return (
@@ -7,7 +8,7 @@ const Navbar:React.FC = () => {
             <div className="shadow-lg">
                 <div className="navbar bg-base-100 container ">
                     <div className="flex-1">
-                        <a className="btn btn-ghost text-xl">daisyUI</a>
+                        <img src={vite} width={30} height={30} alt="logo" />
                     </div>
                     <div className="flex-none">
                         <ul className="menu menu-horizontal px-1">

@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit"
+import {basketState} from "../../interface/data"
 
 
-const initialState = {
+const initialState:basketState = {
     basket: [],
     amount: 0,
     totalAmount: 0,
@@ -14,7 +15,7 @@ const basketSlice = createSlice({
     name: 'basket',
     initialState,
     reducers: {
-
+        
     }
 })
 

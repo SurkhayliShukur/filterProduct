@@ -30,7 +30,7 @@ function Home() {
             <div className="flex flex-wrap justify-between">
                 {
                     data.map((item: singleProductsType) => (
-                        <Cards key={item.id} items={item} />
+                        <Cards key={item.id} items={item} buttonType = "detail" />
                     ))
                 }
             </div>
