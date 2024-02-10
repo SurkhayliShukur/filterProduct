@@ -39,6 +39,7 @@ const Detail: React.FC = () => {
     return (
         <>
             <Layout>
+                <h1 className='text-center text-2xl p-6'>Detail</h1>
                 {content}
             </Layout>
         </>

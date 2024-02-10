@@ -1,6 +1,7 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
 import vite from "../../../public/vite.svg"
+import { SlBasket } from "react-icons/sl";
 
 const Navbar:React.FC = () => {
     return (
@@ -17,6 +18,9 @@ const Navbar:React.FC = () => {
                             </li>
                             <li>
                                 <NavLink to="/product">Product</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/basket"><SlBasket size={20} /></NavLink>
                             </li>
                         </ul>
                     </div>

@@ -14,7 +14,7 @@ export type singleProductsType = {
 export interface productTypes {
     products: singleProductsType[]
 }
-export interface basketType extends Omit<singleProductsType,"id">, priceDetails{}
+export interface basketType extends Omit<singleProductsType,"">, priceDetails{}
 
 export interface basketState extends priceDetails{
     basket: basketType[]
