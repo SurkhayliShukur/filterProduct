@@ -1,5 +1,7 @@
 import { singleProductsType } from "../../interface/data"
 import { useNavigate } from "react-router-dom"
+import {useDispatch} from "react-redux"
+import { addToBasket } from "../../redux/slices/basket-slice"
 
 
 type buttons = "detail" | "product"
@@ -10,6 +12,7 @@ export interface cardProps {
 }
 
 const Cards = ({ items, buttonType }: cardProps) => {
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     return (
         <>
@@ -29,11 +32,27 @@ const Cards = ({ items, buttonType }: cardProps) => {
                         {
                             buttonType === "detail" && <button
                                 onClick={() => navigate(`${"/detail"}/${items.id}`)}
-                                className="btn btn-primary"
+                                className="btn btn-info"
                             >Detail Page
                             </button>
                         }
-                       {/* add basket button */}
+                        {/* add basket button */}
+                        {
+                            buttonType === "product" && <button
+                                onClick={() => {
+                                    dispatch(
+                                        addToBasket({
+                                        amount:1,
+                                        totalAmount:1,
+                                        totalPrice: Number(items.price)
+
+                                    }))
+                                }}
+                                className="btn btn-success"
+                            >
+                                Add Basket
+                            </button>
+                        }
 
                     </div>
 
