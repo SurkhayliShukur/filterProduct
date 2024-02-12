@@ -8,7 +8,6 @@ const initialState: basketState = {
     amount: 0,
     totalAmount: 0,
     totalPrice: 0,
-    totalDiscountPrice: 0,
 }
 
 

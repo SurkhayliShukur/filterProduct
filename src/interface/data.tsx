@@ -18,10 +18,9 @@ export interface priceDetails {
     amount: number,
     totalAmount: number,
     totalPrice: number,
-    totalDiscountPrice: number,
 }
 
-export interface basketType extends Omit<singleProductsType,"">, priceDetails {}
+export interface basketType extends singleProductsType, priceDetails {}
 
 export interface basketState extends priceDetails {
     basket: basketType[]
