@@ -21,7 +21,9 @@ export const store = configureStore({
         [categoryApi.reducerPath]: categoryApi.reducer
     },
     middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware()
+    getDefaultMiddleware({
+        serializableCheck: false,
+    })
     .concat(productApi.middleware)
     .concat(categoryApi.middleware)
 })
