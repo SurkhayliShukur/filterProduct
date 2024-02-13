@@ -42,11 +42,11 @@ const Cards = ({ items, buttonType }: cardProps) => {
                                 onClick={() => {
                                     dispatch(
                                         addToBasket({
-                                        amount:1,
-                                        totalAmount:1,
-                                        totalPrice: Number(items.price)
-
-                                    }))
+                                            ...items,
+                                            amount: 1,
+                                            totalAmount: 1,
+                                            totalPrice: Number(items.price),
+                                        }))
                                 }}
                                 className="btn btn-success"
                             >

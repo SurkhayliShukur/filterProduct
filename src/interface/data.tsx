@@ -1,4 +1,4 @@
-export type singleProductsType = {
+export interface singleProductsType {
     id: number,
     title: string,
     price: string,
@@ -20,7 +20,7 @@ export interface priceDetails {
     totalPrice: number,
 }
 
-export interface basketType extends singleProductsType, priceDetails {}
+export interface basketType  extends singleProductsType, priceDetails {}
 
 export interface basketState extends priceDetails {
     basket: basketType[]
