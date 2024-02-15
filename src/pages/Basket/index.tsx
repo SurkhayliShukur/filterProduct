@@ -8,6 +8,7 @@ import { singleProductsType } from "../../interface/data"
 const Basket: React.FC = () => {
   const basket = useSelector((state:RootState) => state.products.basket.basket)
   const totalPrice = useSelector((state:RootState) => state.products.basket.totalPrice)
+  console.log(basket)
   return (
     <>
       <Layout>
